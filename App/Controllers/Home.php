@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Controllers;
+use App\View;
 
 class Home {
   public function index(){
-    echo "Ok";
+
+
+    $view = new View('home.html');
+    $view->render();
   }
 }
