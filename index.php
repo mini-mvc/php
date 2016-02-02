@@ -1,18 +1,9 @@
 <?php
 
-use App\Controllers\Home;
+use App\Controllers\HomeCtrl;
 
 include_once('autoload.php');
 
-extract($_GET);
+$route = new Route();
 
-if(isset($url)){
-  $url = explode('/',$url);
-  $ctrl = $url[0];
-}
-
-if(isset($ctrl)){
-  $ctrl = "\App\Controllers\\$ctrl";
-  $controle = new $ctrl();
-  $controle->index();
-}
+$route->get('home','HomeCtrl#index');

@@ -3,8 +3,8 @@
 namespace App\Controllers;
 use App\View;
 
-class Home {
-  public function index(){
+class HomeCtrl {
+  public function __construct(){
 
     $view = new View('home.php');
     $view->vars(array('msg'=>'Bem vindo!'));
