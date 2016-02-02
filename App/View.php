@@ -14,4 +14,10 @@ class View{
     echo file_get_contents("App\Views\\$this->arquivo");
   }
 
+
+  public function vars($array){
+    extract($array);
+    include "App/Views/home.php";
+  }
+
 }

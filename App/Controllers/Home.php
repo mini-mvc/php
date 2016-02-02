@@ -6,8 +6,7 @@ use App\View;
 class Home {
   public function index(){
 
-
-    $view = new View('home.html');
-    $view->render();
+    $view = new View('home.php');
+    $view->vars(array('msg'=>'Bem vindo!'));
   }
 }
