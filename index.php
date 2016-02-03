@@ -1,10 +1,15 @@
 <?php
 
-use App\Controllers\HomeCtrl;
-use App\Route;
-
 require __DIR__ . '/vendor/autoload.php';
 
+use Symfony\Component\VarDumper\VarDumper;
 
-$route = new Route();
-$route->get('home','HomeCtrl#index');
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+class People{};
+$people = new People();
+$people->name = "N1k3";
+$people->age = "21";
+
+die(VarDumper::dump($people));
